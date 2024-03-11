@@ -1,77 +1,3 @@
-/* .roboto-thin {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .roboto-light {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .roboto-medium {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .roboto-bold {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .roboto-black {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .roboto-thin-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .roboto-light-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .roboto-regular-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .roboto-medium-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .roboto-bold-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .roboto-black-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-  }
-
-   */
-
 html {
   scroll-behavior: smooth;
 }
@@ -122,35 +48,52 @@ body {
   font-weight: 700;
 }
 
+.section-1 {
+  width: 100vw;
+  height: calc(100vh - 68px);
+}
 .background {
   width: 100%;
   height: calc(100vh - 68px);
   background-image: url("tlo_sekcji.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 300;
 }
 
 .background-container {
   box-sizing: border-box;
   margin: 0 auto;
   width: 960px;
-  height: 100%;
+  height: calc(100vh - 68px);
   display: flex;
   align-items: flex-start;
   gap: 50px;
   justify-content: center;
   flex-direction: column;
   padding: 50px 0;
+  z-index: 200;
+}
+
+.background-shadow {
+  background-color: black;
+  width: 100%;
+  height: calc(100vh - 68px);
+  opacity: 30%;
+  position: absolute;
+  z-index: 10;
 }
 
 .background-container h1 {
   font-weight: 700;
   font-size: 36px;
   width: 600px;
+  z-index: 20;
 }
 .background-container p {
   font-weight: 700;
   font-size: 18px;
+  z-index: 20;
 }
 
 .offer-button {
@@ -164,6 +107,7 @@ body {
   align-items: center;
   transition-duration: 1s;
   transition-property: color background-color;
+  z-index: 300;
 }
 
 .offer-button:hover {
@@ -220,7 +164,7 @@ body {
 .person {
   color: #000000;
 }
-.person h2 {
+.person h3 {
   font-weight: 700;
   font-size: 18px;
   padding: 25px 0;
